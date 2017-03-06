@@ -6,10 +6,10 @@ var service = "${serviceFileName}";
 #foreach ( $tableColumn in $tableColumns )
 	#if ( $tableColumn.visible)
 		#set( $item = {
-			"name": tableColumn.name,
-			"key": tableColumn.key,
-			"label": tableColumn.label,
-			"visible": tableColumn.visible
+			"name": ${tableColumn.name},
+			"key": ${tableColumn.key},
+			"label": ${tableColumn.label},
+			"visible": ${tableColumn.visible}
 		})
 		#set( $dummy = $items.add($item))
 	#end
